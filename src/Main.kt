@@ -7,12 +7,12 @@ fun littleEndianHexToFloat(hex: String): Float {
     return Float.fromBits(reversedHex.toLong(16).toInt())
 }
 
-fun littleEndianHexToLong(hex: String): Int {
+fun littleEndianHexToLong(hex: String): Long {
     // Reverse the order of the bytes
     val reversedHex = hex.chunked(2).reversed().joinToString("")
 
     // Parse the hexadecimal string as an integer
-    return reversedHex.toLong(16).toInt()
+    return reversedHex.toLong(16)
 }
 
 fun main() {
